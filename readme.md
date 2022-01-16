@@ -5,6 +5,7 @@ This template is used in all of my bots, it is lightweight, preformant and simpl
 To get started simply enter your configuration into the JSON file location at references/configuration.json
 
 ## Creating Commands
+### Setting Command Options
 To create a command simply clone the commands/template.js rename it to the name of the command (not neccesary but nice for organizational reasons), once that is completed you can modify the configuration found here.
 ```javascript
 command_model({
@@ -16,16 +17,28 @@ command_model({
 ```
 None of these options are neccesary except for the command name, as they all default to these values.
 ```json
-"name": null,
-"enabled": true,
-"description": null,
-"usage": [],
-"aliases": [],
-"permissionsUser": [],
-"permissionsBot": [],
-"guildOnly": false,
-"developerOnly": false,
+"help": {
+    "name": null,
+    "description": null,
+    "usage": [],
+    "aliases": [],
+}
+"config": {
+    "enabled": true,
+    "permissionsBot": [],
+    "permissionsUser": [],
+    "guildOnly": false,
+    "developerOnly": false,
+}
 ```
+### Retrieving Command Options
+All of these command options are retrieveable from the `this` object within anyof the command functions described below, an example of how to use this is also shown below for people new to Javascript.
+```javascript
+command.run = async function (client, message) {
+    console.log(this.help.name); // will retrieve the name of the command from the command options.
+}
+```
+### Using Command Functions
 You can choose to include any of these within the configuration of the command, apart from the command options you can also set the functions that will run when specific conditions are met. This system is reliable and simple for you to customise.
 ```javascript
 command.run = async function(client, message) {
