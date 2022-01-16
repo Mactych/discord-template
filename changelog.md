@@ -11,3 +11,5 @@
     * Remove: database file
     * Remove test file from functions file
     * Update: check permisions before developerOnly, guildOnly etc.
+    * Update: await command.run() when command is triggered
+    * Add: readme documentation for how to access arguments

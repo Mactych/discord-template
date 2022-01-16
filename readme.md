@@ -62,6 +62,7 @@ command.insufficentDeveloper = async function (client, message) {
     // can customise what happens when developerOnly and command is triggered but user is not developer
 }
 ```
-
 ## Adding Events
 You can modify existing events and create new ones by following the pattern within events/ready.js, there is a simple function that passes in the client and then within that function you can designate what events you'd like to use as you normally would acccording the the [Discord.js v13 docs](https://discord.js.org).
+## Accessing Arguments
+Arugments are split by ' ', you can access the array of arguments by calling `message.args`.

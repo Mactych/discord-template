@@ -24,7 +24,7 @@ const event = async function(client) {
                 if (command.insufficentGuild) return command.insufficentGuild(client, message);
                 return;
             };
-            return command.run(client, message);
+            return await command.run(client, message);;
         }
     });
 };
