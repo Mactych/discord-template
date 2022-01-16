@@ -1,3 +1,4 @@
+![Discord.js Logo](https://cdn.macstudio.pro/uploads/discord.js.svg)
 # Discord-Bot-Template
 This template is used in all of my bots, it is lightweight, preformant and simple to use. This has been based on the [Discord.js](https://discord.js.org) NodeJS framework.
 

@@ -7,3 +7,4 @@
     * Update: forgot to format command options
     * Add: subheadings within the readme
     * Add: how to retrieve values within a command
+    * Add: discord.js logo to readme
