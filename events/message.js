@@ -6,14 +6,6 @@ const event = async function(client) {
         const command = client.commands[message.command] || client.commands[client.aliases[message.command]];
 
         if (message.content.startsWith(client.config.prefix) && command && command.config.enabled) {
-            if (command.config.developerOnly && message.author.id != client.config.developer) {
-                if (command.insufficentDeveloper) return command.insufficentDeveloper(client, message);
-                return;
-            }
-            if (command.config.guildOnly && (!message.guild || message.channel.type === "dm")) {
-                if (command.insufficentGuild) return command.insufficentGuild(client, message);
-                return;
-            };
             for (const perm of command.config.permissionsBot) {
                 if (message.channel.permissionsFor(client.user).has(perm, true)) continue;
                 if (command.insufficentBot) return command.insufficentBot(client, message, perm);
@@ -24,6 +16,14 @@ const event = async function(client) {
                 if (command.insufficentUser) return command.insufficentUser(client, message, perm);
                 return;
             }
+            if (command.config.developerOnly && message.author.id != client.config.developer) {
+                if (command.insufficentDeveloper) return command.insufficentDeveloper(client, message);
+                return;
+            }
+            if (command.config.guildOnly && (!message.guild || message.channel.type === "dm")) {
+                if (command.insufficentGuild) return command.insufficentGuild(client, message);
+                return;
+            };
             return command.run(client, message);
         }
     });

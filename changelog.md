@@ -8,3 +8,6 @@
     * Add: subheadings within the readme
     * Add: how to retrieve values within a command
     * Add: discord.js logo to readme
+    * Remove: database file
+    * Remove test file from functions file
+    * Update: check permisions before developerOnly, guildOnly etc.
