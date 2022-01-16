@@ -16,15 +16,15 @@ command_model({
 ```
 None of these options are neccesary except for the command name, as they all default to these values.
 ```json
-name = null,
-enabled = true,
-description = null,
-usage = [],
-aliases = [],
-permissionsUser = [],
-permissionsBot = [],
-guildOnly = false,
-developerOnly = false,
+"name": null,
+"enabled": true,
+"description": null,
+"usage": [],
+"aliases": [],
+"permissionsUser": [],
+"permissionsBot": [],
+"guildOnly": false,
+"developerOnly": false,
 ```
 You can choose to include any of these within the configuration of the command, apart from the command options you can also set the functions that will run when specific conditions are met. This system is reliable and simple for you to customise.
 ```javascript

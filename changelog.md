@@ -4,3 +4,4 @@
     * Add: this changelog file
     * Add: readme with instructions for how to use
     * Remove: unused command.config.nsfw value
+    * Update: forgot to format command options
