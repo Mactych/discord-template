@@ -1,13 +1,13 @@
 ![Discord.js Logo](https://cdn.macstudio.pro/uploads/discord.js.svg)
 # Discord-Bot-Template
-This template is used in all of my bots, it is lightweight, preformant and simple to use. This has been based on the [Discord.js](https://discord.js.org) NodeJS framework.
+This template is used in all of my bots, it is lightweight, performant and simple to use. This has been based on the [Discord.js](https://discord.js.org) NodeJS framework.
 
 ## Getting Started
 To get started simply enter your configuration into the JSON file location at references/configuration.json
 
 ## Creating Commands
 ### Setting Command Options
-To create a command simply clone the commands/template.js rename it to the name of the command (not neccesary but nice for organizational reasons), once that is completed you can modify the configuration found here.
+To create a command simply clone the commands/template.js rename it to the name of the command (not necessary but nice for organisational reasons), once that is completed you can modify the configuration found here.
 ```javascript
 command_model({
     name: "template",
@@ -16,7 +16,7 @@ command_model({
     description: "You can remove this template, it is just for demonstration purposes",
 });
 ```
-None of these options are neccesary except for the command name, as they all default to these values.
+None of these options are necessary except for the command name, as they all default to these values.
 ```json
 "help": {
     "name": null,
@@ -33,7 +33,7 @@ None of these options are neccesary except for the command name, as they all def
 }
 ```
 ### Retrieving Command Options
-All of these command options are retrieveable from the `this` object within anyof the command functions described below, an example of how to use this is also shown below for people new to Javascript.
+All of these command options are retrievable from the `this` object within any of the command functions described below, an example of how to use this is also shown below for people new to Javascript.
 ```javascript
 command.run = async function (client, message) {
     console.log(this.help.name); // will retrieve the name of the command from the command options.
@@ -63,6 +63,6 @@ command.insufficentDeveloper = async function (client, message) {
 }
 ```
 ## Adding Events
-You can modify existing events and create new ones by following the pattern within events/ready.js, there is a simple function that passes in the client and then within that function you can designate what events you'd like to use as you normally would acccording the the [Discord.js v13 docs](https://discord.js.org).
+You can modify existing events and create new ones by following the pattern within events/ready.js, there is a simple function that passes in the client and then within that function you can designate what events you'd like to use as you normally would according to the [Discord.js v13 docs](https://discord.js.org).
 ## Accessing Arguments
-Arugments are split by ' ', you can access the array of arguments by calling `message.args`.
+Arguments are split by ' ', you can access the array of arguments by calling `message.args`.

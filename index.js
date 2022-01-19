@@ -35,6 +35,6 @@ try {
     client.login(client.config.token).then(() => {
         client.logger.log("bot-login", `logged in as ${client.user.tag}`);
     });
-} catch(e) {
+} catch (e) {
     client.logger.error("bot-init", e);;
 }
